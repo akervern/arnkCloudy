@@ -3,7 +3,7 @@ require 'rspec/core/rake_task'
 
 task :default => [:test]
 
-APP_FILE = "copy_paster_app.rb"
+APP_FILE = "arnk_cloudy_app.rb"
 
 RSpec::Core::RakeTask.new(:test) do |t|
   t.pattern = FileList['test/**/*.rb']

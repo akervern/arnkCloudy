@@ -1,8 +1,13 @@
+require "rubygems"
 require "sinatra"
 require "data_mapper"
 require "dm-migrations"
 
 require "lib/pasty.rb"
+
+configure :development do
+  DataMapper.setup(:default, 'sqlite::memory:')
+end
 
 configure do
   DataMapper.finalize
