@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Create a new CopyPasty</title>
+    <link href="/css/codes.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" href="/css/ui-darkness/jquery-ui-1.8.12.custom.css" rel="Stylesheet" />
+    <script type="text/javascript" src="/js/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.8.12.custom.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+      $("#save").button();
+      $("#radio").buttonset();
+
+      var name = $("#name");
+      var taRight = name.position().left + name.outerWidth()
+      var save = $("#save");
+      save.css("left", taRight - (save.outerWidth() + 10));
+    });
+    </script>
+  </head>
+  <body>
+    <img src="/img/flag.png" alt="beta version" id="flag" />
+    <h1>CopyPasty.new</h1>
+    <form action="." method="POST">
+      <p>
+        <div id="radio">
+        <% @kinds.each_with_index do |kind,index| %>
+          <input <%= "checked=\"checked\"" if index == 0 %>id="rad_<%=kind %>" type="radio" name="language" value="<%= kind %>"/>
+          <label for="rad_<%=kind %>"><%= kind %></label>
+        <% end %>
+        </div>
+      </p>
+      <p id="textarea">
+        <textarea class="code" name="code" id="name"></textarea>
+      </p>
+      <p>
+        <input id="save" type="submit" name="submit" value="Save"/>
+      </p>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+h1 {
+  text-align: center;
+  color: #f8bb00 !important;
+}
+
+h1, input, label, html body textarea {
+  font-family: "Inconsolata", "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+}
+
+.title {
+  color: #f8bb00 !important;
+  float: left;
+  width: 90px;
+}
+label {
+  font-family: "Inconsolata", "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+}
+
+body {
+  background-color: #0f192a !important;
+  color: #bbbbbb !important;
+}
+
+#radio, #textarea {
+  text-align: center;
+}
+
+textarea.code {
+  box-sizing: content-box !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-size: 1em !important;
+  background-color: #0f192a !important;
+  color: #bbbbbb !important;
+  height: 70%;
+  width: 80%;
+}
+
+#flag {
+  position: absolute;
+  left: 0;
+  top: 0;
+}

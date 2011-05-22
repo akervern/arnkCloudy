@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title><%= @encoder.encode(request.url) %></title>
+    <!-- css -->
+    <link href="http://alexgorbatchev.com/pub/sh/current/styles/shCoreMidnight.css" rel="stylesheet" type="text/css" />
+    <link href="/css/codes.css" rel="stylesheet" type="text/css" />
+
+    <!-- javascript -->
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrush<%= @pasty.kind %>.js"></script>
+  </head>
+  <body>
+    <h1><%= @encoder.encode request.url %></h1>
+    <pre class="brush: <%= @pasty.kind.downcase %>"><%= @pasty.code %></pre>
+    <script type="text/javascript">
+      SyntaxHighlighter.all()
+    </script>
+  </body>
+</html>
